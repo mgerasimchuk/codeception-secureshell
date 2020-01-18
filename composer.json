@@ -1,5 +1,5 @@
 {
-    "name": "edno/codeception-secureshell",
+    "name": "MGerasimchuk/codeception-secureshell",
     "description": "Codeception extension providing SSH capabilitie: SSH command, SSH file transfer, SSH tunneling",
     "keywords": ["codeception", "extension", "ssh", "scp"],
     "homepage": "https://github.com/edno/codeception-secureshell",
