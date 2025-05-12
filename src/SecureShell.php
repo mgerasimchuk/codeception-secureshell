@@ -19,9 +19,9 @@ class SecureShell extends Module
     const AUTH_AGENT    = 4;
     const AUTH_NONE     = 0;
 
-    protected $config = ['StrictHostKeyChecking', 'KnownHostsFile'];
+    protected array $config = ['StrictHostKeyChecking', 'KnownHostsFile'];
 
-    protected $requiredFields = [];
+    protected array $requiredFields = [];
 
     /**
      * @var string $knownHostsFile
