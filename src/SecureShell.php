@@ -5,6 +5,7 @@ use Codeception\Exception\ModuleException;
 use Codeception\Exception\ModuleConfigException;
 use Codeception\Module;
 use Codeception\Configuration;
+use PHPUnit\Framework\Assert as PHPUnitAssert;
 use \SplFileObject;
 use \RuntimeException;
 use \Exception;
@@ -216,7 +217,7 @@ class SecureShell extends Module
      */
     public function seeInRemoteOutput($text)
     {
-        \PHPUnit_Framework_Assert::assertContains($text, $this->output['STDOUT']);
+        PHPUnitAssert::assertContains($text, $this->output['STDOUT']);
     }
 
     /**
@@ -228,7 +229,7 @@ class SecureShell extends Module
      */
     public function dontSeeInRemoteOutput($text)
     {
-        \PHPUnit_Framework_Assert::assertNotContains($text, $this->output['STDOUT']);
+        PHPUnitAssert::assertNotContains($text, $this->output['STDOUT']);
     }
 
 
@@ -247,7 +248,7 @@ class SecureShell extends Module
         } catch (Exception $e) {
             $res = null;
         }
-        \PHPUnit_Framework_Assert::assertNotEmpty($res);
+        PHPUnitAssert::assertNotEmpty($res);
     }
 
     /**
@@ -265,7 +266,7 @@ class SecureShell extends Module
         } catch (Exception $e) {
             $res = false;
         }
-        \PHPUnit_Framework_Assert::assertFalse($res);
+        PHPUnitAssert::assertFalse($res);
     }
 
     /**
@@ -299,7 +300,7 @@ class SecureShell extends Module
         } catch (Exception $e) {
             $res = false;
         }
-        \PHPUnit_Framework_Assert::assertTrue($res);
+        PHPUnitAssert::assertTrue($res);
     }
 
     /**
@@ -316,7 +317,7 @@ class SecureShell extends Module
         } catch (Exception $e) {
             $res = false;
         }
-        \PHPUnit_Framework_Assert::assertFalse($res);
+        PHPUnitAssert::assertFalse($res);
     }
 
     /**
